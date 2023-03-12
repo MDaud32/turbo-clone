@@ -14,26 +14,50 @@ export default function Navbar() {
     const currentTheme = theme === "system" ? systemTheme : theme;
 
     if (currentTheme === "dark") {
-      return <BsSunFill onClick={() => setTheme("light")} />;
+      return (
+        <div className="text-black dark:text-white">
+          <BsSunFill onClick={() => setTheme("light")} />
+        </div>
+      );
     } else {
-      return <BsMoonFill onClick={() => setTheme("dark")} />;
+      return (
+        <div className="text-black dark:text-white">
+          <BsMoonFill onClick={() => setTheme("dark")} />
+        </div>
+      );
     }
   };
   return (
     <>
-      <nav className="relative flex flex-wrap items-center justify-between px-2 py-2 bg-black/30 mb-3">
-        <div className="max-w-6xl px-4 mx-auto flex flex-col md:flex-row w-full justify-between">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block ">
+      <nav className="relative w-full flex flex-wrap top-0 items-center justify-between px-2 py-2 dark:bg-black/60 bg-white/90 mb-3 shadow-sm dark:shadow-gray-600 shadow-gray-200 md:fixed">
+        <div className="max-w-6xl px-4 md:mx-auto flex flex-col md:items-center md:flex-row w-full justify-between">
+          <div className=" w-full relative flex flex-row justify-between lg:w-auto lg:static ">
             <Link
-              className="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+              className="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase dark:text-white"
               href="/">
               Turbo
             </Link>
+            <div className="border-[1px] py-1 px-2 text-[12px] text-gray-500 dark:text-gray-400 dark:border-gray-400 rounded-md h-7 mt-3 items-center">
+              <Link
+                href=""
+                className="mr-2 hover:text-gray-700 dark:hover:text-white">
+                Repo
+              </Link>
+              <Link
+                href=""
+                className="hover:text-gray-700 dark:hover:text-white">
+                Pack
+              </Link>
+            </div>
             <button
               className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}>
-              {!navbarOpen ? <FiMenu /> : <AiOutlineClose />}
+              {!navbarOpen ? (
+                <FiMenu className="text-black dark:text-white" />
+              ) : (
+                <AiOutlineClose className="text-black dark:text-white" />
+              )}
             </button>
           </div>
           {/* mobile */}
@@ -48,31 +72,31 @@ export default function Navbar() {
                 <input
                   type="text"
                   id="search-navbar"
-                  className="block w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="block w-full p-2 text-sm text-gray-900 border  rounded-lg dark:bg-gray-900/40 bg-gray-50 focus:ring-blue-500 dark:placeholder-gray-400 dark:text-white"
                   placeholder="Search Docomentation..."
                 />
                 <div className="absolute inset-y-0 pl-2 left-0 flex items-center pointer-events-none">
                   <span className="sr-only">Search icon</span>
                 </div>
               </div>
-              <ul className="flex flex-col md:flex-row list-none lg:ml-auto">
+              <ul className="flex flex-col md:flex-row list-none lg:ml-auto text-black dark:text-gray-500">
                 <li className="nav-item">
                   <Link
-                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                    className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-gray-500 hover:opacity-75 dark:hover:text-white"
                     href="#pablo">
                     <span className="ml-1">Blog</span>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                    className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-gray-500 hover:opacity-75 dark:hover:text-white"
                     href="#pablo">
                     <span className="ml-1">Showcase</span>
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                    className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-gray-500 hover:opacity-75 dark:hover:text-white"
                     href="#pablo">
                     <span className="ml-1">Enterprise</span>
                   </Link>
@@ -82,14 +106,16 @@ export default function Navbar() {
                 <input
                   type="text"
                   id="search-navbar"
-                  className="block w-56 p-1 pl-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="block w-56 p-1  pl-4 text-sm border text-gray-900 dark:focus:border-blue-500  dark:focus:border-2 outline-none rounded-lg bg-gray-50  dark:bg-slate-500/30 dark:placeholder-gray-400 dark:text-white "
                   placeholder="Search Documentation"
                 />
-                <div className="absolute top-0 mt-[6px] mr-2 px-1 right-0 flex items-center pointer-events-none border-[1px] border-gray-500 rounded-[3px] text-[10px]">
+                <div className="absolute top-0 mt-[6px] mr-2 px-1 right-0 flex items-center pointer-events-none border-[1px] border-gray-300 text-gray-500 rounded-[3px] text-[10px]">
                   CTRL K
                 </div>
               </div>
-              <button className="ml-2">{renderThemeChanger()}</button>
+              <button className="ml-2 items-center text-xl">
+                {renderThemeChanger()}
+              </button>
             </div>
           </div>
         </div>
