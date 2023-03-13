@@ -29,7 +29,7 @@ export default function Navbar() {
   };
   return (
     <>
-      <nav className="relative w-full flex flex-wrap top-0 items-center justify-between px-2 py-2 dark:bg-black/60 bg-white/90 mb-3 shadow-sm dark:shadow-gray-600 shadow-gray-200 md:fixed">
+      <nav className=" w-full flex flex-wrap top-0 items-center justify-between px-2 py-2 dark:bg-black/60 bg-white/90 mb-3 shadow-sm dark:shadow-gray-600 shadow-gray-200 fixed">
         <div className="max-w-6xl px-4 md:mx-auto flex flex-col md:items-center md:flex-row w-full justify-between">
           <div className=" w-full relative flex flex-row justify-between lg:w-auto lg:static ">
             <Link
