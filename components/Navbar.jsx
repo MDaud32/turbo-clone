@@ -39,8 +39,8 @@ export default function Navbar() {
             </Link>
             <div className="border-[1px] py-1 px-2 text-[12px] text-gray-500 dark:text-gray-400 dark:border-gray-400 rounded-md h-7 mt-3 items-center">
               <Link
-                href=""
-                className="mr-2 hover:text-gray-700 dark:hover:text-white">
+                href="/RepoPage"
+                className="mr-2 hover:text-gray-700 dark:hover:text-white focus:text-black dark:focus:text-white">
                 Repo
               </Link>
               <Link

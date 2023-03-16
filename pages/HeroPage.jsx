@@ -59,7 +59,7 @@ const HeroPage = () => {
       </p>
       <div className="flex flex-col md:flex-row mx-auto justify-center mt-16 md:space-x-4 gap-4">
         <Link
-          href="#"
+          href="/RepoPage"
           className="w-[70%] md:w-[27%] border-[1px] dark:border-gray-800 rounded-md hover:bg-gradient-to-r p-[2px] from-pink-500 via-red-500 to-yellow-500 mx-auto md:mx-0">
           <div className="z-10 py-[3.3rem] bg-[#fffbfd] dark:bg-black rounded-md w-full      ">
             <Image
