@@ -87,9 +87,13 @@ const RepoPage = () => {
           </p>
           <div className="max-w-lg md:max-w-2xl lg:max-w-6xl mx-auto gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8">
             {data.map((item) => (
-              <div key={item.title} className="border-[1px] p-8 rounded-md">
+              <div
+                key={item.title}
+                className="border-[1px] border-gray-500 p-8 rounded-md text-gray-400">
                 <Image src={item.img} width={50} height={50} alt="card logo" />
-                <h1 className="mt-8 font-semibold text-xl">{item.title}</h1>
+                <h1 className="mt-8 font-semibold text-xl text-black dark:text-white">
+                  {item.title}
+                </h1>
                 <p>{item.description}</p>
               </div>
             ))}
