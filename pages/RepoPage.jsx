@@ -9,6 +9,9 @@ import { useTheme } from "next-themes";
 import { BsArrowRightShort, BsArrowLeftShort } from "react-icons/bs";
 import Head from "next/head";
 import img from "../public/unsplash.jpg";
+import signature from "../public/jared-signature-light.svg";
+import profile from "../public/jaredpalmer.webp";
+
 const RepoPage = () => {
   const { systemTheme, theme, setTheme } = useTheme();
 
@@ -51,12 +54,12 @@ const RepoPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="mt-40 px-4 md:px-0">
-        <div className="border-b-2 border-gray-500 pb-2">
+        <div className="border-b-2 border-gray-300 dark:border-gray-500 pb-2">
           {renderThemeChanger()}
           <h1 className="uppercase text-center text-xl md:text-3xl font-bold mb-4">
             Turborepo
           </h1>
-          <h1 className="text-3xl md:text-6xl font-extrabold text-center dark:text-transparent text-black dark:bg-clip-text bg-gradient-to-tr dark:from-gray-400 dark:to-gray-50 ">
+          <h1 className="text-3xl md:text-6xl font-extrabold text-center dark:text-transparent text-black dark:bg-clip-text bg-gradient-to-tr dark:from-gray-400 dark:to-gray-50">
             The build system that
             <br /> makes ship happen
           </h1>
@@ -64,30 +67,51 @@ const RepoPage = () => {
             Turborepo is a high-performance build system for JavaScript and
             TypeScript codebases.
           </p>
-          <div className="flex justify-center items-center gap-4 mt-8">
-            <button className="bg-black dark:bg-white text-white dark:text-black font-bold rounded-md px-8 py-2 ">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
+            <button className="w-1/2 sm:w-40 bg-black dark:bg-white text-white dark:text-black font-bold rounded-md px-8 py-2">
               Get Started
             </button>
-            <button className="px-12 py-2 border-[1px] dark:border-gray-500 border-gray-300 dark:hover:border-white hover:border-black rounded-md font-bold duration-500">
+            <button className="w-1/2 sm:w-36 px-12 py-2 border-[1px] dark:border-gray-500 border-gray-300 dark:hover:border-white hover:border-black rounded-md font-bold duration-500">
               GitHub
             </button>
           </div>
         </div>
         {/* banner */}
-        <div className="text-center text-gray-400 mt-10 border-b-2 border-gray-500">
-          <h1 className="text-5xl font-semibold">Work faster. Work better.</h1>
+        <div className="mt-24">
+          <h1 className="text-5xl font-semibold text-black dark:text-gray-400 text-center">
+            Why Turborepo?
+          </h1>
+          <p className="text-sm md:text-lg max-w-xl text-center text-gray-400 mx-auto mt-3">
+            Turborepo reimagines build system techniques used by Facebook and
+            Google to remove maintenance burden and overhead.
+          </p>
+          <div className="max-w-lg md:max-w-2xl lg:max-w-6xl mx-auto gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8">
+            {data.map((item) => (
+              <div key={item.title} className="border-[1px] p-8 rounded-md">
+                <Image src={item.img} width={50} height={50} alt="card logo" />
+                <h1 className="mt-8 font-semibold text-xl">{item.title}</h1>
+                <p>{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* banner */}
+        <div className="text-center text-gray-400 mt-24 border-b-2 border-gray-500">
+          <h1 className="text-5xl font-semibold text-black dark:text-gray-400">
+            Work faster. Work better.
+          </h1>
           <p className="text-sm md:text-lg max-w-lg mx-auto mt-3">
             Turborepo is a high-performance build system for JavaScript and
             TypeScript codebases.
           </p>
           <div className="flex flex-col sm:flex-row w-full mx-auto gap-4 justify-center mb-8 mt-8">
-            <div class="mx-auto md:mx-0 w-[300px] bg-white rounded-lg shadow-2xl flex flex-col">
+            <div className="mx-auto md:mx-0 w-full sm:w-[300px] bg-white rounded-lg shadow-2xl flex flex-col">
               <Image
                 src={img}
                 alt="Laptop on Desk"
                 width={300}
                 height={150}
-                className="rounded-t-lg"
+                className="rounded-t-lg sm:w-[300px] w-full"
               />
               <div className="p-6">
                 <h2 className="font-bold text-xl md:text-3xl mb-2 text-orange-700">
@@ -96,13 +120,13 @@ const RepoPage = () => {
                 <p className="text-orange-700">Look at me go sideways!</p>
               </div>
             </div>
-            <div class="mx-auto md:mx-0 w-[300px] bg-white rounded-lg shadow-2xl flex flex-col">
+            <div className="mx-auto md:mx-0 w-full sm:w-[300px] bg-white rounded-lg shadow-2xl flex flex-col">
               <Image
                 src={img}
                 alt="Laptop on Desk"
                 width={300}
                 height={150}
-                className="rounded-t-lg"
+                className="rounded-t-lg sm:w-[300px] w-full"
               />
               <div className="p-6">
                 <h2 className="font-bold text-xl md:text-3xl mb-2 text-orange-700">
@@ -111,13 +135,13 @@ const RepoPage = () => {
                 <p className="text-orange-700">Look at me go sideways!</p>
               </div>
             </div>
-            <div class="mx-auto md:mx-0 w-[300px] bg-white rounded-lg shadow-2xl flex flex-col">
+            <div className="mx-auto md:mx-0 w-full sm:w-[300px] bg-white rounded-lg shadow-2xl flex flex-col">
               <Image
                 src={img}
                 alt="Laptop on Desk"
                 width={300}
                 height={150}
-                className="rounded-t-lg"
+                className="rounded-t-lg sm:w-[300px] w-full"
               />
               <div className="p-6">
                 <h2 className="font-bold text-xl md:text-3xl mb-2 text-orange-700">
@@ -129,8 +153,63 @@ const RepoPage = () => {
           </div>
         </div>
         {/* banner */}
+        <div className="mt-24 border-b border-gray-300 pb-10">
+          <h1 className="text-3xl md:text-6xl font-extrabold text-center dark:text-transparent text-black dark:bg-clip-text bg-gradient-to-tr dark:from-gray-400 dark:to-gray-50 max-w-3xl mx-auto">
+            Scaling your Codebase shouldn&apos;t be so difficult
+          </h1>
+          <p className="max-w-xl mx-auto mt-8 text-lg">
+            The bigger your project grows, the slower it gets. Tasks like
+            linting, testing, and building begin to take enormous amounts of
+            time.
+            <br /> <br /> If you&apos;re serving multiple applications, you
+            might reach for a monorepo. They&apos;re incredible for
+            productivity, especially on the frontend, but the tooling can be a
+            nightmare. There&apos;s a lot of stuff to do (and things to mess
+            up). Nothing “just works.” It&apos;s become completely normal to
+            waste entire days or weeks on plumbing—tweaking configs, writing
+            one-off scripts, and stitching stuff together.
+            <br /> <br /> We need something else.
+            <br /> <br /> A fresh take on the whole setup. Designed to glue
+            everything together. A toolchain that works for you and not against
+            you. With sensible defaults, but even better escape hatches. Built
+            with the same techniques used by the big guys, but in a way that
+            doesn&apos;t require PhD to learn or a staff to maintain.
+            <br /> <br /> With Turborepo, we&apos;re doing just that.
+            <br /> <br /> &apos; building a build system that can keep up with
+            your team. You&apos;ll see your CI get faster, duplicated work get
+            cut, and your NPM scripts get simpler. You&apos;ll get a world-class
+            development environment, without the maintenance burden.
+          </p>
+          <div className="md:max-w-3xl lg:ml-28 mt-10">
+            <div className="border-t max-w-lg md:ml-auto dark:border-gray-600 border-gray-300 mb-1"></div>
+            <div className="flex flex-row md:max-w-3xl justify-center gap-8">
+              <Image
+                src={profile}
+                alt="profile"
+                width={80}
+                height={50}
+                className="rounded-full border-[1px] p-2 border-gray-600"
+              />
+              <Image
+                src={signature}
+                alt="signature"
+                className="md:w-44 w-28 -mt-6"
+              />
+            </div>
+            <p className="text-gray-500 text-center">
+              <span className="font-bold">Jared Palmer</span> Founder of
+              Turborepo
+            </p>
+          </div>
+          <div className="flex justify-center mt-20">
+            <button className="mx-auto items-center font-semibold bg-black dark:bg-white text-white dark:text-black px-10 py-3 rounded-md">
+              Start Building
+            </button>
+          </div>
+        </div>
+        {/* banner */}
         <div className="md:px-20 text-gray-400 mt-10">
-          <h1 className="text-3xl md:text-[5rem] font-semibold mb-4 md:mb-8">
+          <h1 className="text-3xl md:text-[5rem] font-semibold mb-4 md:mb-8 text-black dark:text-gray-400">
             Start selling with Square.
           </h1>
           <div className="flex flex-col md:flex-row">
@@ -147,7 +226,9 @@ const RepoPage = () => {
               <BsArrowRightShort className="text-3xl mt-2 hover:ml-2 duration-500" />
             </div>
           </div>
-          <h3 className="font-semibold text-2xl mb-2 mt-8">Stay in touch</h3>
+          <h3 className="font-semibold text-black dark:text-gray-400 text-2xl mb-2 mt-8">
+            Stay in touch
+          </h3>
           <p className="max-w-xl">
             Subscribe to our email list to receive advice from other business
             owners, support articles, tips from industry experts and more.
@@ -185,3 +266,60 @@ const RepoPage = () => {
 };
 
 export default RepoPage;
+
+const data = [
+  {
+    img: "/refresh-light.svg",
+    title: "Incremental builds",
+    description:
+      "Building once is painful enough, Turborepo will remember what you've built and skip the stuff that's already been computed.",
+  },
+  {
+    img: "/fingerprint-light.svg",
+    title: "Content-aware hashing",
+    description:
+      "Turborepo looks at the contents of your files, not timestamps to figure out what needs to be built.",
+  },
+  {
+    img: "/lightning-light.svg",
+    title: "Parallel execution",
+    description:
+      "Execute builds using every core at maximum parallelism without wasting idle CPUs.",
+  },
+  {
+    img: "/cloud-light.svg",
+    title: "Remote Caching",
+    description:
+      "Share a remote build cache with your teammates and CI/CD for even faster builds.",
+  },
+  {
+    img: "/cpu-light.svg",
+    title: "Zero runtime overhead",
+    description:
+      "Turborepo won’t interfere with your runtime code or touch your sourcemaps.",
+  },
+  {
+    img: "/piecon-light.svg",
+    title: "Pruned subsets",
+    description:
+      "Speed up PaaS deploys by generating a subset of your monorepo with only what's needed to build a specific target.",
+  },
+  {
+    img: "/arrows-expand-light.svg",
+    title: "Task pipelines",
+    description:
+      "Define the relationships between your tasks and then let Turborepo optimize what to build and when.",
+  },
+  {
+    img: "/beaker-light.svg",
+    title: "Meets you where you’re at",
+    description:
+      "Using Lerna? Keep your package publishing workflow and use Turborepo to turbocharge task running.",
+  },
+  {
+    img: "/bars-light.svg",
+    title: "Profile in your browser",
+    description:
+      "Generate build profiles and import them in Chrome or Edge to understand which tasks are taking the longest.",
+  },
+];
