@@ -106,12 +106,12 @@ const RepoPage = () => {
           <h1 className="text-5xl font-semibold text-black dark:text-gray-400">
             Work faster. Work better.
           </h1>
-          <p className="text-sm md:text-lg max-w-lg mx-auto mt-3">
+          <p className="text-sm md:text-lg max-w-lg mx-auto mt-3 px-4">
             Turborepo is a high-performance build system for JavaScript and
             TypeScript codebases.
           </p>
           <div className="flex flex-col sm:flex-row w-full mx-auto gap-4 justify-center mb-8 mt-8">
-            <div className="mx-auto md:mx-0 w-full sm:w-[300px] bg-white rounded-lg shadow-2xl flex flex-col">
+            <div className="mx-auto md:mx-0 w-[90%] sm:w-[300px] bg-white rounded-lg shadow-2xl flex flex-col">
               <Image
                 src={img}
                 alt="Laptop on Desk"
@@ -126,7 +126,7 @@ const RepoPage = () => {
                 <p className="text-orange-700">Look at me go sideways!</p>
               </div>
             </div>
-            <div className="mx-auto md:mx-0 w-full sm:w-[300px] bg-white rounded-lg shadow-2xl flex flex-col">
+            <div className="mx-auto md:mx-0 w-[90%] sm:w-[300px] bg-white rounded-lg shadow-2xl flex flex-col">
               <Image
                 src={img}
                 alt="Laptop on Desk"
@@ -141,7 +141,7 @@ const RepoPage = () => {
                 <p className="text-orange-700">Look at me go sideways!</p>
               </div>
             </div>
-            <div className="mx-auto md:mx-0 w-full sm:w-[300px] bg-white rounded-lg shadow-2xl flex flex-col">
+            <div className="mx-auto md:mx-0 w-[90%] sm:w-[300px] bg-white rounded-lg shadow-2xl flex flex-col">
               <Image
                 src={img}
                 alt="Laptop on Desk"
