@@ -54,30 +54,32 @@ const RepoPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="mt-40 px-4 md:px-0">
-        <div className="border-b-2 border-gray-300 dark:border-gray-500 pb-2">
-          {renderThemeChanger()}
-          <h1 className="uppercase text-center text-xl md:text-3xl font-bold mb-4">
-            Turborepo
-          </h1>
-          <h1 className="text-3xl md:text-6xl font-extrabold text-center dark:text-transparent text-black dark:bg-clip-text bg-gradient-to-tr dark:from-gray-400 dark:to-gray-50">
-            The build system that
-            <br /> makes ship happen
-          </h1>
-          <p className="text-center text-sm md:text-xl max-w-lg mx-auto  text-gray-500 dark:text-gray-300 mt-4">
-            Turborepo is a high-performance build system for JavaScript and
-            TypeScript codebases.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
-            <button className="w-1/2 sm:w-40 bg-black dark:bg-white text-white dark:text-black font-bold rounded-md px-8 py-2">
-              Get Started
-            </button>
-            <button className="w-1/2 sm:w-36 px-12 py-2 border-[1px] dark:border-gray-500 border-gray-300 dark:hover:border-white hover:border-black rounded-md font-bold duration-500">
-              GitHub
-            </button>
+        <div>
+          <div className="shadow-md shadow-gray-300 dark:shadow-gray-500 pb-28">
+            {renderThemeChanger()}
+            <h1 className="uppercase text-center text-xl md:text-3xl font-bold mb-4">
+              Turborepo
+            </h1>
+            <h1 className="text-3xl md:text-6xl font-extrabold text-center dark:text-transparent text-black dark:bg-clip-text bg-gradient-to-tr dark:from-gray-400 dark:to-gray-50">
+              The build system that
+              <br /> makes ship happen
+            </h1>
+            <p className="text-center text-sm md:text-xl max-w-lg mx-auto  text-gray-500 dark:text-gray-300 mt-4">
+              Turborepo is a high-performance build system for JavaScript and
+              TypeScript codebases.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
+              <button className="w-1/2 sm:w-40 bg-black dark:bg-white text-white dark:text-black font-bold rounded-md px-8 py-2">
+                Get Started
+              </button>
+              <button className="w-1/2 sm:w-36 px-12 py-2 border-[1px] dark:border-gray-500 border-gray-300 dark:hover:border-white hover:border-black rounded-md font-bold duration-500">
+                GitHub
+              </button>
+            </div>
           </div>
         </div>
         {/* banner */}
-        <div className="mt-24">
+        <div className="mt-24 shadow-md shadow-gray-300 dark:shadow-gray-500 pb-28">
           <h1 className="text-5xl font-semibold text-black dark:text-gray-400 text-center">
             Why Turborepo?
           </h1>
@@ -100,7 +102,7 @@ const RepoPage = () => {
           </div>
         </div>
         {/* banner */}
-        <div className="text-center text-gray-400 mt-24 border-b-2 border-gray-500">
+        <div className="text-center text-gray-400 mt-24 shadow-md shadow-gray-300 dark:shadow-gray-500 pb-28">
           <h1 className="text-5xl font-semibold text-black dark:text-gray-400">
             Work faster. Work better.
           </h1>
@@ -157,7 +159,7 @@ const RepoPage = () => {
           </div>
         </div>
         {/* banner */}
-        <div className="mt-24 border-b border-gray-300 pb-10">
+        <div className="mt-24 shadow-md shadow-gray-300 dark:shadow-gray-500 pb-28">
           <h1 className="text-3xl md:text-6xl font-extrabold text-center dark:text-transparent text-black dark:bg-clip-text bg-gradient-to-tr dark:from-gray-400 dark:to-gray-50 max-w-3xl mx-auto">
             Scaling your Codebase shouldn&apos;t be so difficult
           </h1>
@@ -184,9 +186,9 @@ const RepoPage = () => {
             cut, and your NPM scripts get simpler. You&apos;ll get a world-class
             development environment, without the maintenance burden.
           </p>
-          <div className="md:max-w-3xl lg:ml-28 mt-10">
-            <div className="border-t max-w-lg md:ml-auto dark:border-gray-600 border-gray-300 mb-1"></div>
-            <div className="flex flex-row md:max-w-3xl justify-center gap-8">
+          <div className="mx-auto w-full mt-10">
+            <div className="border-t max-w-lg md:mx-auto dark:border-gray-600 border-gray-300 mb-1"></div>
+            <div className="flex flex-row mx-auto justify-center gap-8">
               <Image
                 src={profile}
                 alt="profile"
@@ -212,7 +214,7 @@ const RepoPage = () => {
           </div>
         </div>
         {/* banner */}
-        <div className="md:px-20 text-gray-400 mt-10">
+        <div className="md:px-20 text-gray-400 mt-20 mx-auto">
           <h1 className="text-3xl md:text-[5rem] font-semibold mb-4 md:mb-8 text-black dark:text-gray-400">
             Start selling with Square.
           </h1>

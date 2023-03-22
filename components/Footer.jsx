@@ -18,7 +18,7 @@ const Footer = () => {
     }
   };
   return (
-    <div className="px-6 md:px-28 flex flex-col justify-center w-full py-12 mx-auto bg-gray-100 dark:bg-black mt-10">
+    <div className="px-6 md:px-12 flex flex-col justify-center w-full py-20 mx-auto bg-gray-100 dark:bg-black mt-10">
       <div className="flex flex-col lg:flex-row">
         <div className="w-full md:max-w-4xl mx-auto gap-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 justify-center">
           <div className="text-gray-500 text-[12px] flex flex-col">
@@ -119,7 +119,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mt-8">
+      <div className="mt-16">
         {renderThemeChanger()}
         <p className="text-gray-500 text-[12px]">
           © 2023 Vercel, Inc. All rights reserved.

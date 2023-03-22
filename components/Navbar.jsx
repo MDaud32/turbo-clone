@@ -49,16 +49,21 @@ export default function Navbar() {
                 Pack
               </Link>
             </div>
-            <button
-              className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
-              type="button"
-              onClick={() => setNavbarOpen(!navbarOpen)}>
-              {!navbarOpen ? (
-                <FiMenu className="text-black dark:text-white" />
-              ) : (
-                <AiOutlineClose className="text-black dark:text-white" />
-              )}
-            </button>
+            <div className="flex flex-row">
+              <button
+                className="text-white cursor-pointer text-xl leading-none px-2 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
+                type="button"
+                onClick={() => setNavbarOpen(!navbarOpen)}>
+                {!navbarOpen ? (
+                  <FiMenu className="text-black dark:text-white" />
+                ) : (
+                  <AiOutlineClose className="text-black dark:text-white" />
+                )}
+              </button>
+              <button className="ml-2 items-center text-xl block md:hidden">
+                {renderThemeChanger()}
+              </button>
+            </div>
           </div>
           {/* mobile */}
           <div
@@ -79,7 +84,9 @@ export default function Navbar() {
                   <span className="sr-only">Search icon</span>
                 </div>
               </div>
-              <ul className="flex flex-col md:flex-row list-none lg:ml-auto text-black dark:text-gray-500">
+              <ul
+                className="flex flex-col md:flex-row list-none lg:ml-auto text-black dark:text-gray-500"
+                onClick={() => setNavbarOpen(false)}>
                 <li className="nav-item">
                   <Link
                     className="px-3 py-2 flex items-center text-xs uppercase  leading-snug text-gray-500 hover:opacity-75 dark:hover:text-white"
@@ -113,7 +120,7 @@ export default function Navbar() {
                   CTRL K
                 </div>
               </div>
-              <button className="ml-2 items-center text-xl">
+              <button className="ml-2 items-center text-xl hidden md:block">
                 {renderThemeChanger()}
               </button>
             </div>
