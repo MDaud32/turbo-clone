@@ -214,8 +214,8 @@ const RepoPage = () => {
           </div>
         </div>
         {/* banner */}
-        <div className="md:px-20 text-gray-400 mt-20 mx-auto px-4">
-          <h1 className="text-3xl md:text-[5rem] font-semibold mb-4 md:mb-8 text-black dark:text-gray-400">
+        <div className="flex flex-col justify-center items-center md:px-20 text-gray-400 mt-20 mx-auto px-4">
+          <h1 className="text-3xl md:text-[5rem] font-semibold mb-4 md:mb-8 text-black dark:text-gray-400 leading-[4rem] text-center mx-auto">
             Start selling with Square.
           </h1>
           <div className="flex flex-col md:flex-row">
@@ -232,7 +232,7 @@ const RepoPage = () => {
               <BsArrowRightShort className="text-3xl mt-2 hover:ml-2 duration-500" />
             </div>
           </div>
-          <h3 className="font-semibold text-black dark:text-gray-400 text-2xl mb-2 mt-8">
+          <h3 className="font-semibold text-black dark:text-gray-400 text-2xl mb-2 mt-8 underline">
             Stay in touch
           </h3>
           <p className="max-w-xl">

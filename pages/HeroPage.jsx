@@ -53,9 +53,9 @@ const HeroPage = () => {
       <h1 className="text-5xl font-extrabold text-center dark:text-transparent text-black dark:bg-clip-text bg-gradient-to-tr dark:from-gray-400 dark:to-gray-50 mt-40">
         Make Ship Heppen
       </h1>
-      <p className="text-center text-xl max-w-lg mx-auto  text-gray-500 dark:text-gray-300 mt-4">
-        Turbo is an incremental bundler and build system
-        <br /> optimized for JavaScript and TypeScript, written in Rust.
+      <p className="text-center text-md md:text-xl max-w-xl px-4 mx-auto  text-gray-500 dark:text-gray-300 mt-4">
+        Turbo is an incremental bundler and build system optimized for
+        JavaScript and TypeScript, written in Rust.
       </p>
       <div className="flex flex-col md:flex-row mx-auto justify-center mt-16 md:space-x-4 gap-4">
         <Link
